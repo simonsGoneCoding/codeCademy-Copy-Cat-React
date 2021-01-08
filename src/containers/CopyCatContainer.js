@@ -28,8 +28,9 @@ export class CopyCatContainer extends React.Component {
 
     return (
       <CopyCat
+        name="Maciek"
         copying={copying}
-        toogleTape={toggleTape}
+        toggleTape={toggleTape}
         onChange={this.handleChange}
         inputValue={this.state.input}
       />
