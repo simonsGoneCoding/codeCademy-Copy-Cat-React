@@ -16,12 +16,18 @@ export class CopyCat extends React.Component {
     return (
       <div style={styles.divStyles}>
         <h1 style={{ marginBottom: 80 }}>Copy Cat</h1>
+        <input
+          type="text"
+          value={this.props.inputValue}
+          onChange={this.props.onChange}
+        />
         <img
           style={styles.imgStyles}
           alt="cat"
           src={copying ? images.copycat : images.quietcat}
           onClick={toggleTape}
         />
+        <p>{copying ? this.props.inputValue : null}</p>
       </div>
     );
   }
